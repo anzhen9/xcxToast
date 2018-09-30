@@ -9,6 +9,7 @@
  * @param   src         自定义图像    style=1生效
  * @param   url         跳转链接    style=2生效
  * @param   position    弹窗位置：top顶部，bottom底部，center中间；   默认center  style=2时center等同top
+ * @author  anzhen9@hotmail.com
  */
 const app = getApp();
 var isPlainObject = obj => {
