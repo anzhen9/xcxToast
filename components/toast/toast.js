@@ -36,7 +36,7 @@ Component({
         if (!isPlainObject(newVal)) {
           let pages = getCurrentPages();
           let page = pages[pages.length - 1];
-          var duration = typeof newVal.duration == 'number' ? newVal.duration : 2000;
+          var duration = typeof parseInt(newVal.duration) == 'number' ? parseInt(newVal.duration) : 2000;
           if (duration > 0) {
             setTimeout(() => {
               page.setData({

@@ -82,7 +82,7 @@
 
 .style1 .title {
   margin-top: 20rpx;
-  line-height: 36rpx;
+  line-height: 40rpx;
   font-size: 30rpx;
   color: #fff;
   text-align: center;
