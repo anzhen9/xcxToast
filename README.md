@@ -53,10 +53,10 @@ toast的参数多了不少，由当时的3个参数增加到9个参数<br>
 emmmmmmmm后(lan)期(de)优化<br>
 下边是各参数的定义，在toast自定义组件的js里也有介绍，demo里也有用法<br>
 <table>
-    <th>
+    <tr>
         <td>字段</td>
         <td>描述</td>
-    </th>
+    </tr>
     <tr>
         <td>style</td>
         <td>弹窗样式：1浮动中央，2吸附边缘   默认1</td>
