@@ -52,6 +52,7 @@ Page({
 toast的参数多了不少，由当时的3个参数增加到9个参数<br>
 emmmmmmmm后(lan)期(de)优化<br>
 下边是各参数的定义，在toast自定义组件的js里也有介绍，demo里也有用法<br>
+```html
 <table>
     <tr>
         <td>style</td>
