@@ -1,0 +1,11 @@
+<view class="toast-block toast-block{{detail.style}} {{detail.position}}" wx:if="{{detail.text}}" catchtap="hideToast">
+  <view class="style1 animated vanishIn" wx:if="{{detail.style == 1}}">
+    <image wx:if="{{detail.src}}" src="{{detail.src}}"></image>
+    <view wx:elif="{{detail.flag!='none'}}" class="ico-font icon-{{detail.flag}}"></view>
+    <view class="title {{!detail.src&&detail.flag=='none'?'none':''}}">{{detail.text}}</view>
+  </view>
+  <view class="style2 animated fadeIn{{detail.position == 'bottom' ? 'Up' : 'Down'}} {{detail.flag}}" style="{{detail.bgc?'background:'+detail.bgc+';':''}}{{detail.tc?'color:'+detail.tc+';':''}}" wx:if="{{detail.style == 2}}" bindtap="turnToPage">
+    <view class="title">{{detail.text}}</view>
+    <view class="ico-font icon-arrow" hidden="{{!detail.url}}"></view>
+  </view>
+</view>

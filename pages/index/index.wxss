@@ -1,0 +1,22 @@
+.toast-field{
+  width: 100%;
+  padding: 15rpx 0;
+}
+.toast-field>view{
+  padding-bottom: 15rpx;
+}
+.toast-field radio-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.toast-field radio{
+  margin-bottom: 30rpx;
+}
+.toast-field input{
+  background: #f2f2f2;
+}
+.tips{
+  color:#e64340;
+  font-size: 24rpx;
+}

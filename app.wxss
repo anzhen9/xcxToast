@@ -1,0 +1,12 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  width: calc(100% - 60rpx);
+  padding: 30rpx 30rpx 200rpx 30rpx;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+} 

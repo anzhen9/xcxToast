@@ -1,0 +1,307 @@
+.toast-block {
+  z-index: 999999;
+  display: flex;
+  position: fixed;
+}
+
+/* 样式1 */
+.toast-block1{
+  left:calc(50% - 300rpx);
+}
+.toast-block1.top {
+  align-items: flex-start;
+  justify-content: center;
+  top: 0;
+}
+
+.toast-block1.center {
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+}
+
+.toast-block1.bottom {
+  align-items: flex-end;
+  justify-content: center;
+  bottom: 0;
+}
+
+.style1 {
+  width: 540rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10rpx;
+}
+
+.top .style1 {
+  margin-top: 120rpx;
+}
+
+.bottom .style1 {
+  margin-bottom: 120rpx;
+}
+
+.style1>image, .style1 .ico-font {
+  width: 60rpx;
+  height: 60rpx;
+  font-size: 60rpx;
+  max-width: 140rpx;
+  max-height: 140rpx;
+  display: block;
+  color: #fff;
+}
+
+.style1 .ico-font.icon-loading {
+  -webkit-animation: circle 1s infinite linear;
+  animation: circle 1s infinite linear;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.style1 .title {
+  margin-top: 20rpx;
+  line-height: 36rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.style1 .title.none {
+  margin-top: 0;
+  display: block;
+}
+
+/* 样式2 */
+.toast-block2{
+  left:0;
+  width: 750rpx;
+}
+.toast-block2.top, .toast-block2.center {
+  align-items: flex-start;
+  justify-content: center;
+  top:0;
+}
+
+.toast-block2.bottom {
+  align-items: flex-end;
+  justify-content: center;
+  bottom:0;
+}
+
+.style2 {
+  width: calc(100% - 60rpx);
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 28rpx;
+}
+
+.top .style2, .center .style2 {
+  box-shadow: 0 1rpx 0 0 rgba(136, 136, 136, 0.8);
+}
+
+.bottom .style2 {
+  box-shadow: 0 -1rpx 0 0 rgba(136, 136, 136, 0.8);
+}
+
+.style2.success, .style2.none {
+  background: rgba(9, 187, 7, 0.8);
+}
+
+.style2.warning {
+  background: rgba(230, 67, 64, 0.8);
+}
+
+.style2.loading {
+  background: rgba(53, 53, 53, 0.8);
+}
+
+.style2 .title {
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 36rpx;
+  letter-spacing: 0px;
+}
+
+.style2>.icon-arrow {
+  width: 14rpx;
+  height: 26rpx;
+  margin-left: 15rpx;
+}
+
+@font-face {
+  font-family: 'arrow';
+  src: url('data:font/truetype;charset=utf-8;base64,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') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ico-font {
+  font-family: 'arrow' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+
+.icon-loading:before {
+  content: "\e901";
+}
+
+.icon-success:before {
+  content: "\e902";
+}
+
+.icon-warning:before {
+  content: "\e903";
+}
+
+/* 出现动画 */
+
+.animated {
+  -webkit-animation-duration: 125ms;
+  animation-duration: 125ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.vanishIn {
+  -webkit-animation-name: vanishIn;
+  animation-name: vanishIn;
+}
+
+@-webkit-keyframes vanishIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(2, 2);
+    -webkit-filter: blur(90rpx);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    -webkit-transform: scale(1, 1);
+    -webkit-filter: blur(0);
+  }
+}
+
+@keyframes vanishIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    -webkit-filter: blur(90rpx);
+  }
+
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    -webkit-filter: blur(0);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}

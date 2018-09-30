@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="toast-field">
+    <view style="width:100%;">样式：</view>
+    <view class="tips">目前有两种样式，样式1类似微信自带的toast浮动在页面上显示，样式2贴边显示</view>
+    <radio-group bindchange="selectStyle">
+      <radio value="1">样式1</radio>
+      <radio value="2">样式2</radio>
+    </radio-group>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">提示内容：</view>
+    <view class="tips">toast中要显示的文字，必填项</view>
+    <input bindinput="changeText"></input>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">显示时间（毫秒）：</view>
+    <view class="tips">toast显示时间，单位毫秒，填0表示一直显示</view>
+    <input type="number" bindinput="changeDuration"></input>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">提示类型：</view>
+    <view class="tips">样式1中主要是图标变化，样式2中则为背景色变化</view>
+    <radio-group bindchange="selectFlag">
+      <radio value="success">成功(success)</radio>
+      <radio value="warning">警告(warning)</radio>
+      <radio value="loading">加载(loading)</radio>
+      <radio value="none">不显示(none)</radio>
+    </radio-group>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">自定义背景色（如：#ff0000，rgb(255,0,0)，rgba(255,0,0,0.5)）：</view>
+    <view class="tips">样式2生效，填写后优先此背景色，flag的背景色失效</view>
+    <input bindinput="changeBgc"></input>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">自定义文字色（如：#ff0000，rgb(255,0,0)，rgba(255,0,0,0.5)）：</view>
+    <view class="tips">样式2生效，填写后优先此文字色</view>
+    <input bindinput="changeTc"></input>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">自定义图像：</view>
+    <view class="tips">样式1生效，可以是本地图片也可以是网络图片，设置后优先显示，flag对应图标失效此处以/images/demo.gif为例</view>
+    <switch bindchange="changeSrc"></switch>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">跳转链接：</view>
+    <view class="tips">样式2生效，设置后会显示右箭头，此处以/pages/logs/logs为例</view>
+    <switch bindchange="changeUrl"></switch>
+  </view>
+  <view class="toast-field">
+    <view style="width:100%;">显示位置：</view>
+    <view class="tips">样式1三种分别对应三个位置，样式2中间等同顶部，均显示在顶端</view>
+    <radio-group bindchange="selectPosition">
+      <radio value="top">顶部(top)</radio>
+      <radio value="center">中间(center)</radio>
+      <radio value="bottom">底部(bottom)</radio>
+    </radio-group>
+  </view>
+  <view class="toast-field">
+    <button catchtap="showToast">显示</button>
+  </view>
+</view>
+
+<toast detail="{{toast}}"></toast>
