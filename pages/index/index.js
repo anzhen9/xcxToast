@@ -13,7 +13,7 @@ Page({
       position: 'center',
       duration: 2000
     },
-    toast:{}
+    // toast:{}
   },
   
   onLoad: function () {
