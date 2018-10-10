@@ -12,8 +12,7 @@ Page({
       style: 1,
       position: 'center',
       duration: 2000
-    },
-    // toast:{}
+    }
   },
   
   onLoad: function () {
@@ -83,8 +82,9 @@ Page({
     })
   },
   showToast(){
-    this.setData({
-      toast: this.data.toastTemp
-    })
+    app.showToast(this.data.toastTemp,()=>{
+      console.group('封装了个回调',new Date())
+      console.log('有空扔组件里，现在先放在app.js封装里')
+    });
   }
 })
