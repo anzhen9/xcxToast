@@ -6,7 +6,13 @@
 
 需要的参数比之前的多很多，后期可能会考虑优化
 
-
+## 2018-10-17 更新
+新增了个自定义样式cs使用的时候直接写在toast标签里就行,内容直接写css样式：<br>
+注意:使用此标签后detail内的position自动失效；<br>
+```xml
+<button catchtap="showToast">显示</button>
+<toast detail="{{toast}}" cs="width:690rpx;top:10rpx;left:30rpx;"></toast>
+```
 ## 用法
 
 在需要的页面的JSON里引入<br>
