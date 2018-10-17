@@ -39,6 +39,11 @@
     <input bindinput="changeTc"></input>
   </view>
   <view class="toast-field">
+    <view style="width:100%;">自定义样式（传入css样式）：</view>
+    <view class="tips">传入此参数后position位置失效</view>
+    <input bindinput="changeStyle"></input>
+  </view>
+  <view class="toast-field">
     <view style="width:100%;">自定义图像：</view>
     <view class="tips">样式1生效，可以是本地图片也可以是网络图片，设置后优先显示，flag对应图标失效此处以/images/demo.gif为例</view>
     <switch bindchange="changeSrc"></switch>
@@ -62,4 +67,4 @@
   </view>
 </view>
 
-<toast detail="{{toast}}"></toast>
+<toast detail="{{toast}}" cs="{{style}}"></toast>

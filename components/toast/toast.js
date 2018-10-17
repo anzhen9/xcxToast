@@ -47,6 +47,10 @@ Component({
           }
         }
       }
+    },
+    cs:{
+      type:String,
+      value:''
     }
   },
   data: {

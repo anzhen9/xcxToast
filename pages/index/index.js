@@ -60,6 +60,11 @@ Page({
       toastTemp: toastTemp
     })
   },
+  changeStyle(e){
+    this.setData({
+      style: e.detail.value
+    })
+  },
   changeSrc(e) {
     var toastTemp = this.data.toastTemp;
     toastTemp.src = e.detail.value ? '/images/demo.gif' : '';

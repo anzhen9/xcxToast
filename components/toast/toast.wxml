@@ -1,4 +1,4 @@
-<view class="toast-block toast-block{{detail.style}} {{detail.position}}" wx:if="{{detail.text}}" catchtap="hideToast">
+<view class="toast-block toast-block{{detail.style}} {{detail.position}}" wx:if="{{detail.text}}" catchtap="hideToast" style="{{cs}}">
   <view class="style1 animated vanishIn" wx:if="{{detail.style == 1}}">
     <image wx:if="{{detail.src}}" src="{{detail.src}}"></image>
     <view wx:elif="{{detail.flag!='none'}}" class="ico-font icon-{{detail.flag}}"></view>
